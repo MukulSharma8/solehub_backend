@@ -12,6 +12,9 @@ const app = express();
 app.use(express.json());
 
 connectDB();
+app.get("/", (req, res) => {
+  res.send("SOLEHUB API is running");
+});
 
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
